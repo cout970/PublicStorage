@@ -1,0 +1,86 @@
+### Create account
+// Creates a new account and returns a new session token (identifies and authorizes the account)
+POST http://localhost:8080/api/v1/account
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "admin",
+  "password": "admin"
+}
+
+### Login into account
+// Returns a session token, can be new or can resuse the last valid token
+POST http://localhost:8080/api/v1/account/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "admin",
+  "password": "admin"
+}
+
+### Logout of account
+// Invalidates a session token
+POST http://localhost:8080/api/v1/account/logout
+Content-Type: application/json
+Accept: application/json
+
+{
+  "token": "f75ad188918afeeec6f43fec30807092"
+}
+
+### Update password
+// Changes the account password
+PUT http://localhost:8080/api/v1/account
+Content-Type: application/json
+Accept: application/json
+
+{
+  "token": "0908737fb21efb77f477e8d131f3ff03",
+  "password": "admin"
+}
+
+### Delete account
+// Deletes the account and all its pastes
+DELETE http://localhost:8080/api/v1/account
+Content-Type: application/json
+Accept: application/json
+
+{
+  "token": "0908737fb21efb77f477e8d131f3ff03"
+}
+
+
+### Create paste
+POST http://localhost:8080/api/v1/paste
+Content-Type: application/json
+Accept: application/json
+
+{
+  "token": "a3a58bae2bf45a86731c5b6af6e8dba4",
+  "contents": "new paste"
+}
+
+### Get paste
+// If viewed from a browser it will download the paste as a text file
+GET http://localhost:8080/api/v1/paste/1
+
+### Update paste
+PUT http://localhost:8080/api/v1/paste/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "token": "a3a58bae2bf45a86731c5b6af6e8dba4",
+  "contents": "modified contents"
+}
+
+### Delete paste
+DELETE http://localhost:8080/api/v1/paste/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "token": "a3a58bae2bf45a86731c5b6af6e8dba4"
+}

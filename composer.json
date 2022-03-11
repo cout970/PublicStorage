@@ -1,0 +1,14 @@
+{
+  "require": {
+    "slim/slim": "4.*",
+    "slim/psr7": "^1.3",
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "ext-sqlite": "*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "name": "cout970/public_storage",
+  "description": "Store public snippets"
+}

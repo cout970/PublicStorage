@@ -1,0 +1,6 @@
+{
+  "log_path": "../data/logs.txt",
+  "db_path": "../data/database.sqlite",
+  "session_timeout": 3600,
+  "debug": false
+}
