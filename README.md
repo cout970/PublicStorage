@@ -20,10 +20,11 @@ Currently, hosted at [ps.cout970.net](https://ps.cout970.net)
 - Download composer2 (follow the [official guide](https://getcomposer.org/download/))
 - Install php dependencies `php ./composer.phar install`
 - Update perms 
-  - `chown root:www-data -r .` 
+  - `mkdir data`
+  - `chown root:www-data -R .` 
   - `find . -type d -exec chmod 755 {} \;`
   - `find . -type f -exec chmod 644 {} \;`
-  - `chmod 775 .`
+  - `chmod 775 data`
 - Enter the public directory `cd public`
 - Run the php test server `php -S localhost:8080`
 - Test that the API is working as expected and stop the process
