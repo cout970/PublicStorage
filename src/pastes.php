@@ -25,7 +25,7 @@ function register_pastes($app) {
     );
     $id = get_connection()->lastInsertId();
 
-    return $response->withHeader('Location', '/api/paste/' . $id)->withStatus(201, 'Created');
+    return $response->withHeader('Location', '/api/v1/paste/' . $id)->withStatus(201, 'Created');
   });
 
   // Delete paste
